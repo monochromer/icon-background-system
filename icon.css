@@ -1,0 +1,15 @@
+.icon {
+  --_icon-size: var(--icon-size, 1em);
+  display: inline-block;
+  width: var(--_icon-size);
+  height: var(--_icon-size);
+  background-color: currentColor;
+
+  -webkit-mask-image: var(--icon-url);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: var(--icon-url);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <symbol id="activity-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+  </symbol>
+
+  <symbol id="airplay-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+    <polygon points="12 15 17 21 7 21 12 15"></polygon>
+  </symbol>
+
+  <symbol id="alert-circle-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="8" x2="12" y2="12"></line>
+    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+  </symbol>
+
+  <use xlink:href="#activity-icon" transform="translate(0, 0)" />
+  <use xlink:href="#airplay-icon" transform="translate(0, 24)" />
+  <use xlink:href="#alert-circle-icon" transform="translate(0, 48)" />
+
+  <view id="activity" viewBox="0 0 24 24" />
+  <view id="airplay" viewBox="0 24 24 24" />
+  <view id="alert-circle" viewBox="0 48 24 24" />
+</svg>

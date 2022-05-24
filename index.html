@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon System</title>
+  <style>
+    .icons-demo {
+      --icon-size: 2em;
+      animation: colorize 3s linear alternate infinite;
+    }
+
+    @keyframes colorize {
+      from {
+        color: #f48918;
+      }
+
+      to {
+        color: #3f52ee;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="icon.css">
+
+  <link class="icons-manifest" media="all" id="single-files" rel="stylesheet" href="single-files/manifest.css">
+  <link class="icons-manifest" media="not all" id="stack" rel="stylesheet" href="stack/manifest.css">
+  <link class="icons-manifest" media="not all" id="symbol" rel="stylesheet" href="symbol/manifest.css">
+  <link class="icons-manifest" media="not all" id="view" rel="stylesheet" href="view/manifest.css">
+  <link class="icons-manifest" media="not all" id="svg-view" rel="stylesheet" href="svg-view/manifest.css">
+  <link class="icons-manifest" media="not all" id="view-symbol" rel="stylesheet" href="view-symbol/manifest.css">
+</head>
+<body>
+  <form>
+    <select name="icons-manifest">
+      <option value="single-files">single-files</option>
+      <option value="stack">stack</option>
+      <option value="symbol">symbol</option>
+      <option value="view">view</option>
+      <option value="svg-view">svg-view</option>
+      <option value="view-symbol">view-symbol</option>
+    </select>
+  </form>
+
+  <div class="icons-demo">
+    <div class="icon" style="--icon-url: var(--icon-symbol-activity);"></div>
+    <div class="icon" style="--icon-url: var(--icon-symbol-airplay);"></div>
+    <div class="icon" style="--icon-url: var(--icon-symbol-alert-circle);"></div>
+  </div>
+
+  <script>
+    const allManifests = document.querySelectorAll('.icons-manifest')
+
+    document.addEventListener('change', (event) => {
+      const { name, value } = event.target
+
+      if (name !== 'icons-manifest') {
+        return
+      }
+
+      allManifests.forEach((stylesheet) => {
+        stylesheet.media = value === stylesheet.id ? 'all' : 'not all'
+      })
+    })
+  </script>
+</body>
+</html>

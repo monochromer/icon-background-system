@@ -1,0 +1,5 @@
+:root {
+  --icon-symbol-activity: url('/view-symbol/sprite.svg#activity');
+  --icon-symbol-airplay: url('/view-symbol/sprite.svg#airplay');
+  --icon-symbol-alert-circle: url('/view-symbol/sprite.svg#alert-circle');
+}
